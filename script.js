@@ -439,7 +439,11 @@ async function search() {
             matches.push(product);
         }
     });
-    if(matches)
+    if(matches.length === 0){
+        items.innerHTML += `<div class="not-found">
+        <span> <i class="fa-solid fa-triangle-exclamation fa-xl"></i> No search results found ... ! Try searching for something else or make sure the spelling is correct !</span>
+    </div>`;
+    }
 }
 
   
